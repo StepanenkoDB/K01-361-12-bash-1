@@ -16,7 +16,7 @@ case $doing in
     do
     echo "Укажите каталог архива:"
     read path
-    var=$(ls -l | grep "$path")
+    var=$(find -name "$path")
     if [ "$var" = "" ]; then
     echo "$(tput setaf 1)Нет такого каталога, попробуйте снова$(tput setaf 0)"
     fi
@@ -31,7 +31,7 @@ case $doing in
     do
     echo "Укажите имя архива:"
     read archname
-    var1=$(ls -l | grep "$archname")
+    var1=$(find -name "$archname")
     if [ "$var1" = "" ]; then
     echo "$(tput setaf 1)Архива не существует или он имеет тип, отличный от tar. Попробуйте снова.$(tput setaf 0)"
     fi
