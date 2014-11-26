@@ -40,7 +40,7 @@ case $doing in
     done
     tar -xvzf $archname;;
 3)
-    exit 0;;
+    exit 250;;
 *)
     echo "$(tput setaf 1)Введено неправильное действие.$(tput setaf 0)"
 esac
